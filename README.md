@@ -56,7 +56,7 @@ Starting openocd. Port 5449 is used because default openocd tcp port 4444 is bus
 Relative paths like "target/stm32f1x.cfg" will be automatically resolved by openocd from /usr/share/openocd/scripts/
 
 ```
-$ openocd -c "telnet_port 5449" -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c "transport select hla_swd"
+$ openocd -c "telnet_port 5449" -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
 Open On-Chip Debugger 0.9.0 (2015-05-28-17:08)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -66,14 +66,12 @@ Info : The selected transport took over low-level target control. The results mi
 adapter speed: 1000 kHz
 adapter_nsrst_delay: 100
 none separate
-Warn : Transport "hla_swd" was already selected
-hla_swd
 Info : Unable to match requested speed 1000 kHz, using 950 kHz
 Info : Unable to match requested speed 1000 kHz, using 950 kHz
 Info : clock speed 950 kHz
 Info : STLINK v2 JTAG v17 API v2 SWIM v4 VID 0x0483 PID 0x3748
 Info : using stlink api v2
-Info : Target voltage: 3.548515
+Info : Target voltage: 3.553267
 Info : stm32f1x.cpu: hardware has 6 breakpoints, 4 watchpoints
 ```
 
