@@ -5,7 +5,9 @@ D baremetal "Hello, World!" on Cortex-M3.
 * https://github.com/JinShil/D_Runtime_ARM_Cortex-M_study
 * http://wiki.dlang.org/Minimal_semihosted_ARM_Cortex-M_%22Hello_World%22
 
-I am used cheapest hardware:
+#### Overview
+
+I am used only cheapest hardware:
 
 * [Cheap STM32 Cortex-M3 board LeafLabs Maple Mini (replica?)](http://www.ebay.com/itm/141404280807) (need soldering!) - AU $5.52
 * [ST-Link V2 JTAG SWD adaptor (replica)](http://www.aliexpress.com/snapshot/6796984210.html?orderId=68316685665367) - $3
