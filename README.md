@@ -14,7 +14,19 @@ I am used cheapest hardware:
 
 ![Hardware overview](overview.png)
 
-LeafLabs Maple Mini has a USB connection port and bootloader installed, but it isn't used because it's need to test full build chain with JTAG connection.
+#### Pinout
+
+Maple Mini can be powered from 3.3V source by JTAG adaptor using ~~Vcc~~ and ~~GND~~ pins. It is also possible to power from 5..12V power source by ~~Vin~~ pin.
+
+LeafLabs Maple Mini hasn't JTAG or SWD socket, so here is JTAG/SWD pinout (numbers of pins printed on the silkscreen):
+
+* 18 - TRST
+* 19 - TDO
+* 20 - TDI
+* 21 - TCK (SWD: SWCLK)
+* 22 - TMS (SWD: SWDIO)
+
+LeafLabs Maple Mini has an USB connection port and preinstalled bootloader, but it isn't used in this example because it's need to test full build chain with JTAG connection.
 
 ####Code
 
