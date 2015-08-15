@@ -1,4 +1,4 @@
-Baremetal D "Hello, World!" on Cortex-M3.
+D baremetal "Hello, World!" on Cortex-M3.
 =====
 
 *Repeats Michael V. Franklin work "D Runtime ARM Cortex-M study" for Cortex-M3*
