@@ -63,7 +63,7 @@ Info : Target voltage: 3.548515
 Info : stm32f1x.cpu: hardware has 6 breakpoints, 4 watchpoints
 ```
 
-Next, starting gdb and connecting to openocd debugging socket
+Starting gdb and connecting to openocd debugging socket
 ```
 $ arm-none-eabi-gdb --init-eval-command="target remote localhost:3333" start.elf
 GNU gdb (7.7.1+dfsg-1+6) 7.7.1
@@ -84,4 +84,61 @@ Remote debugging using localhost:3333
 0x00000000 in ?? ()
 Reading symbols from start.elf...done.
 (gdb) 
+```
+
+Enabling semihosting and loading code into MCU by performing this commands:
+```
+monitor arm semihosting enable
+monitor reset halt
+load
+monitor reset init
+```
+```
+(gdb) monitor arm semihosting enable
+semihosting is enabled
+(gdb) monitor reset halt
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000008 msp: 0x20005000, semihosting
+(gdb) load
+Loading section .text, size 0x8c lma 0x8000000
+Start address 0x8000000, load size 140
+Transfer rate: 229 bytes/sec, 140 bytes/write.
+(gdb) monitor reset init
+target state: halted
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000008 msp: 0x20005000, semihosting
+```
+
+Then "continue" command will starts MCU to perform example:
+
+```
+(gdb) continue
+Continuing.
+^C
+Program received signal SIGINT, Interrupt.
+0x0800006c in start.SemihostingInvoke() (command=5, message=0x20004fe4) at start.d:15
+15	    __asm
+(gdb)
+```
+
+...and openocd terminal will prints "Hello, World!" message:
+```
+[...]
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000008 msp: 0x20005000, semihosting
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
 ```
