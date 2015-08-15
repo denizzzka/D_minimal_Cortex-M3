@@ -18,7 +18,7 @@ I am used only cheapest hardware:
 
 #### Pinout
 
-Maple Mini can be powered from 3.3V source by JTAG adaptor using ~~Vcc~~ and ~~GND~~ pins. It is also possible to power from 5..12V power source by ~~Vin~~ pin.
+Maple Mini can be powered from 3.3V source by JTAG adaptor using `Vcc` and `GND` pins. It is also possible to power from 5..12V power source by `Vin` pin.
 
 LeafLabs Maple Mini hasn't JTAG or SWD socket, so here is JTAG/SWD pinout (numbers of pins printed on the silkscreen):
 
