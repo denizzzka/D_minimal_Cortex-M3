@@ -2,7 +2,7 @@ Baremetal D "Hello, World!" on Cortex-M3.
 =====
 
 *Repeats Michael V. Franklin work "D Runtime ARM Cortex-M study" for Cortex-M3*
-* https://github.com/JinShil/D_Runtime_ARM_Cortex-M_study/wiki/1.1---Hello,-World!
+* https://github.com/JinShil/D_Runtime_ARM_Cortex-M_study
 * http://wiki.dlang.org/Minimal_semihosted_ARM_Cortex-M_%22Hello_World%22
 
 I am used cheapest hardware:
