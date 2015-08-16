@@ -1,7 +1,7 @@
 MEMORY
 {
   SRAM     (rxw) : ORIGIN = 0x20000000, LENGTH =   20k
-  FLASH    (rx)  : ORIGIN = 0x08000000, LENGTH = 1024k
+  FLASH    (rx)  : ORIGIN = 0x08000000, LENGTH =  128k
 }
  
 _stackStart = ORIGIN(SRAM) + LENGTH(SRAM);
