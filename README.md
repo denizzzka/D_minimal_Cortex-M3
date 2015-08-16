@@ -22,11 +22,11 @@ Maple Mini can be powered from 3.3V source by JTAG adaptor using `Vcc` and `GND`
 
 LeafLabs Maple Mini hasn't JTAG or SWD socket, so here is JTAG/SWD pinout (numbers of pins printed on the silkscreen):
 
-* 18 - TRST
-* 19 - TDO
-* 20 - TDI
-* 21 - TCK (SWD: SWCLK)
-* 22 - TMS (SWD: SWDIO)
+* `18` - TRST
+* `19` - TDO
+* `20` - TDI
+* `21` - TCK (SWD: SWCLK)
+* `22` - TMS (SWD: SWDIO)
 
 LeafLabs Maple Mini has an USB connection port and preinstalled bootloader, but it isn't used in this example because it's need to test full build chain with JTAG connection.
 
